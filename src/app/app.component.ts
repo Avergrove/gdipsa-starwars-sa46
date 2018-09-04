@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'starwars';
+
+  category = "";
+  items = ["Leia", "Chewy", "Han"]
+
+  loadCategory($event){
+    this.category = $event;
+     
+    switch($event){
+      case "Characters":
+        
+
+      default:
+        break;
+    }
+
+    // Get all people from http https://swapi.co/api/people/
+  }
 }
