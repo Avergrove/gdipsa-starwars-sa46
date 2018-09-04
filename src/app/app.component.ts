@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,19 +10,33 @@ export class AppComponent {
   title = 'starwars';
 
   category = "";
-  items = ["Leia", "Chewy", "Han"]
+  items = [];
 
-  loadCategory($event){
+  constructor(private http: HttpClient) { };
+
+  loadCategory($event) {
     this.category = $event;
-     
-    switch($event){
+
+    switch ($event) {
       case "Characters":
-        
+        this.items = this.getItems("Characters");
 
       default:
         break;
     }
-
-    // Get all people from http https://swapi.co/api/people/
   }
+
+  getItems(category){
+
+    var jsonItems = [];
+
+    this.http.get('https://swapi.co/api/people/').subscribe((data) => {
+      data.results.forEach(function (element) {
+        jsonItems.push(element.name);
+      });
+    })   
+    
+    return jsonItems;
+  }
+
 }

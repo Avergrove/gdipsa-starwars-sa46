@@ -6,6 +6,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { CategoryItemsComponent } from './category-items/category-items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ItemDetailsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
