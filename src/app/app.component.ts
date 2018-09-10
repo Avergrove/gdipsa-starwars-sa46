@@ -19,24 +19,62 @@ export class AppComponent {
 
     switch ($event) {
       case "Characters":
-        this.items = this.getItems("Characters");
+        this.http.get('https://swapi.co/api/people/').subscribe((data) => {
+          data.results.forEach((element, index) => {
+            this.items.push(element.name);
+          });
+        })
+        break;
+
+      case "Films":
+        this.http.get('https://swapi.co/api/films/').subscribe((data) => {
+          data.results.forEach((element, index) => {
+            this.items.push(element.title);
+          });
+        })
+        break;
+
+
+      case "Species":
+        this.http.get('https://swapi.co/api/species/').subscribe((data) => {
+          data.results.forEach((element, index) => {
+            this.items.push(element.name);
+          });
+        })
+        break;
+
+
+      case "Starships":
+        this.http.get('https://swapi.co/api/starships/').subscribe((data) => {
+          data.results.forEach((element, index) => {
+            this.items.push(element.name);
+          });
+        })
+        break;
+
+
+      case "Vehicles":
+        this.http.get('https://swapi.co/api/vehicles/').subscribe((data) => {
+          data.results.forEach((element, index) => {
+            this.items.push(element.name);
+          });
+        })
+        break;
+
+
+      case "Planets":
+        this.http.get('https://swapi.co/api/planets/').subscribe((data) => {
+          data.results.forEach((element, index) => {
+            this.items.push(element.name);
+          });
+        })
+        break;
+
+
 
       default:
         break;
     }
-  }
-
-  getItems(category){
-
-    var jsonItems = [];
-
-    this.http.get('https://swapi.co/api/people/').subscribe((data) => {
-      data.results.forEach(function (element) {
-        jsonItems.push(element.name);
-      });
-    })   
-    
-    return jsonItems;
   }
 
 }
