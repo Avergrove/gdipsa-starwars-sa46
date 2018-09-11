@@ -141,6 +141,8 @@ export interface Vehicle{
     cargo_capacity: string;
     consumables: string;
     vehicle_class: string;
+
+    
     pilots: string[];
     films: string[];
     created: string;

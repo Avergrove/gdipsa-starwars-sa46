@@ -1,4 +1,4 @@
-<div [ngClass]="{container: true, animated: true, float: !activeState, hidden: !activeState, fadeOutLeft: !activeState, fadeInRight: activeState}">
+<div #itemDetails [ngClass]="{container: true, animated: true, float: !activeState, hidden: !activeState, fadeOutLeft: !activeState, fadeInRight: activeState}">
   <div>
     <div *ngIf="item.category == 'people'">
       <h2>{{item.name}}</h2>
@@ -44,14 +44,35 @@
     <div *ngIf="item.category == 'starship'">
       <h2>{{item.name}}</h2>
       <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div>Birth year: {{item.birth_year}}</div>
+      <div><span class="item-key">Name:</span> {{item.name}}</div>
+      <div><span class="item-key">Model:</span> {{item.model}}</div>
+      <div><span class="item-key">Manufacturer:</span> {{item.manufacturer}}</div>
+      <div><span class="item-key">Cost in Credit:</span> {{item.cost_in_credit}}</div>
+      <div><span class="item-key">Length:</span> {{item.length}}</div>
+      <div><span class="item-key">Max Atmosphering Speed:</span> {{item.max_atmosphering_speed}}</div>
+      <div><span class="item-key">Crew:</span> {{item.crew}}</div>
+      <div><span class="item-key">Passengers:</span> {{item.passengers}}</div>
+      <div><span class="item-key">Cargo Capacity:</span> {{item.cargo_capacity}}</div>
+      <div><span class="item-key">Consumables:</span> {{item.consumables}}</div>
+      <div><span class="item-key">Hyperdrive Rating:</span> {{item.hyperdrive_rating}}</div>
+      <div><span class="item-key">MGLT:</span> {{item.mglt}}</div>
+      <div><span class="item-key">Starship Class:</span> {{item.starship_class}}</div>
     </div>
 
 
     <div *ngIf="item.category == 'vehicle'">
       <h2>{{item.name}}</h2>
       <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div>Birth year: {{item.birth_year}}</div>
+      <div><span class="item-key">Model:</span> {{item.model}}</div>
+      <div><span class="item-key">Manufacturer:</span> {{item.manufacturer}}</div>
+      <div><span class="item-key">Cost in Credit:</span> {{item.cost_in_credit}}</div>
+      <div><span class="item-key">Length:</span> {{item.length}}</div>
+      <div><span class="item-key">Max Atmosphering Speed:</span> {{item.max_atmosphering_speed}}</div>
+      <div><span class="item-key">Crew:</span> {{item.crew}}</div>
+      <div><span class="item-key">Passengers:</span> {{item.passengers}}</div>
+      <div><span class="item-key">Cargo Capacity:</span> {{item.cargo_capacity}}</div>
+      <div><span class="item-key">Consumables:</span> {{item.consumables}}</div>
+      <div><span class="item-key">Vehicle Class:</span> {{item.vehicle_class}}</div>
     </div>
 
 
