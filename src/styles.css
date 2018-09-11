@@ -2,3 +2,7 @@
 .container{
     position: absolute;
 }
+
+.hidden{
+    visibility: hidden;
+}

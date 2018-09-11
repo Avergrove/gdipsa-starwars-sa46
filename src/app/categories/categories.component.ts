@@ -24,7 +24,7 @@ export class CategoriesComponent implements OnInit {
     this.toggleState();
   }
 
-  toggleState(){
+  public toggleState(){
     this.activeState = !this.activeState;
   }
 

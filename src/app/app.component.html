@@ -3,6 +3,12 @@
 <h1>Starpedia</h1>
 <h4>A (probably) comprehensive guide on Star Wars!</h4>
 
-<app-categories (categorySelect)="loadCategory($event)"></app-categories>
-<app-category-items (itemSelect)="loadItem($event)" [category] = "category" [items] = "items"></app-category-items>
-<app-item-details [item] = "item" ></app-item-details>
+
+<button [ngClass] = "{btn: true, 'btn-disabled': !canBack, hidden: !canBack, 'btn-primary': canBack}" (click)="pageBack()">Back</button>
+
+<div>
+    <app-categories #categories (categorySelect)="loadCategory($event); categoryItems.toggleState()"></app-categories>
+    <app-category-items #categoryItems (itemSelect)="loadItem($event); itemDetails.onPageArrival()" [category]="category"
+        [items]="items"></app-category-items>
+    <app-item-details #itemDetails [item]="item"></app-item-details>
+</div>

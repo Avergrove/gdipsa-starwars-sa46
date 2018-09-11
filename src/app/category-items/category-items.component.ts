@@ -23,10 +23,6 @@ export class CategoryItemsComponent implements OnInit {
     this.toggleState();
   }
 
-  ngOnChanges(changes) {
-    this.toggleState();
-  }
-
   toggleState(){
     this.activeState = !this.activeState;
   }

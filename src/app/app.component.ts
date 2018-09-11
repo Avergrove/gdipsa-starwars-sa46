@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PeopleMeta, FilmMeta , SpeciesMeta, StarshipMeta, VehicleMeta, PlanetMeta} from './model'
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoryItemsComponent } from './category-items/category-items.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +15,15 @@ export class AppComponent {
 
   category = "";
   items = [];
-  item = "";
+  item;
+
+
+  @ViewChild('categories') categories: CategoriesComponent;
+  @ViewChild('categoryItems') categoryItems: CategoryItemsComponent;
+  @ViewChild('itemDetails') itemDetails: ItemDetailsComponent;
+  canBack = false;
+  appPage = 1;
+
 
   constructor(private http: HttpClient) { };
 
@@ -83,11 +94,34 @@ export class AppComponent {
         break;
     }
 
+    // Handle page metainfo
+    this.canBack = true;
+    this.appPage++;
+
   }
 
   loadItem($event){
     this.item = $event;
+    this.appPage++;
   }
 
+  // Goes back one page.
+  pageBack(){
+
+    if(this.appPage == 2){
+      this.categories.toggleState();
+      this.categoryItems.toggleState();
+    }
+
+    else if(this.appPage == 3){
+      this.categoryItems.toggleState();
+      this.itemDetails.toggleState();
+    }
+
+    this.appPage--;
+    if(this.appPage <= 1){
+      this.canBack = false;
+    }
+  }
 
 }
