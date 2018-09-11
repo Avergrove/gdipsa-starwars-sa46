@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-category-items',
@@ -7,17 +7,27 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CategoryItemsComponent implements OnInit {
 
+  @Output() itemSelect = new EventEmitter();
   @Input() category : String;
   @Input() items : String[];
+
+  activeState = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  loadCategory($event){
-    console.log("Running event");
+  displayItem(item){
+    this.itemSelect.emit(item);
+    this.toggleState();
   }
 
+  ngOnChanges(changes) {
+    this.toggleState();
+  }
 
+  toggleState(){
+    this.activeState = !this.activeState;
+  }
 }

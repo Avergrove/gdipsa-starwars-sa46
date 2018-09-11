@@ -1,9 +1,11 @@
-<h3>{{category}}</h3>
-<ul class="list-group">
-  <li *ngFor="let item of items; let i = index" class="list-group-item">
-    <Button class="btn btn-default">
+<div [ngClass]="{container: true, animated: true, fadeOutLeft: activeState, fadeInRight: !activeState}">
+  <h3>{{category}}</h3>
+  <ul class="list-group">
+    <li *ngFor="let item of items; let i = index" class="list-group-item">
+      <Button class="btn btn-default" (click)="displayItem(item)">
         {{item?.name}}
         {{item?.title}}
-    </Button>
-  </li>
-</ul>
+      </Button>
+    </li>
+  </ul>
+</div>

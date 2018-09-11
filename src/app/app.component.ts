@@ -12,6 +12,7 @@ export class AppComponent {
 
   category = "";
   items = [];
+  item = "";
 
   constructor(private http: HttpClient) { };
 
@@ -23,6 +24,7 @@ export class AppComponent {
       case "Characters":
         this.http.get<PeopleMeta>('https://swapi.co/api/people/').subscribe((data) => {
           data.results.forEach((element, index) => {
+            element.category = "people";
             this.items.push(element);
           });
         })
@@ -31,6 +33,7 @@ export class AppComponent {
       case "Films":
         this.http.get<FilmMeta>('https://swapi.co/api/films/').subscribe((data) => {
           data.results.forEach((element, index) => {
+            element.category = "film"
             this.items.push(element);
           });
         })
@@ -40,6 +43,7 @@ export class AppComponent {
       case "Species":
         this.http.get<SpeciesMeta>('https://swapi.co/api/species/').subscribe((data) => {
           data.results.forEach((element, index) => {
+            element.category = "species"
             this.items.push(element);
           });
         })
@@ -49,6 +53,7 @@ export class AppComponent {
       case "Starships":
         this.http.get<StarshipMeta>('https://swapi.co/api/starships/').subscribe((data) => {
           data.results.forEach((element, index) => {
+            element.category = "starship";
             this.items.push(element);
           });
         })
@@ -58,6 +63,7 @@ export class AppComponent {
       case "Vehicles":
         this.http.get<VehicleMeta>('https://swapi.co/api/vehicles/').subscribe((data) => {
           data.results.forEach((element, index) => {
+            element.category = "vehicle";
             this.items.push(element);
           });
         })
@@ -67,6 +73,7 @@ export class AppComponent {
       case "Planets":
         this.http.get<PlanetMeta>('https://swapi.co/api/planets/').subscribe((data) => {
           data.results.forEach((element, index) => {
+            element.category = "planet";
             this.items.push(element);
           });
         })
@@ -77,5 +84,10 @@ export class AppComponent {
     }
 
   }
+
+  loadItem($event){
+    this.item = $event;
+  }
+
 
 }

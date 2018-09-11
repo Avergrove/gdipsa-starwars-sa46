@@ -6,6 +6,7 @@ export interface PeopleMeta {
 }
 
 export interface People {
+    category: "people";
     name: string;
     height: string;
     mass: number;
@@ -36,17 +37,21 @@ export interface FilmMeta {
 }
 
 export interface Film {
+    category: "film";
+    
     title: string;
     episode_id: string;
     opening_crawl: string;
     director: string;
     producer: string;
     release_date: string;
+
     characters: string[];
     planets: string[];
     starships: string[];
     vehicles: string[];
     species: string[];
+    
     created: string;
     edited: string;
     url: string;
@@ -62,6 +67,8 @@ export interface SpeciesMeta {
 }
 
 export interface Species {
+    category: "species";
+    
     name: string;
     classification: string;
     designation: string;
@@ -89,6 +96,8 @@ export interface StarshipMeta {
 }
 
 export interface Starship{
+    category: "starship";
+    
     name: string;
     model: string;
     manufacturer: string;
@@ -118,6 +127,8 @@ export interface VehicleMeta {
 }
 
 export interface Vehicle{
+    category: "vehicle";
+    
     name: string;
     model: string;
     manufacturer: string;
@@ -144,6 +155,8 @@ export interface PlanetMeta{
 }
 
 export interface Planet{
+    category: "planet";
+    
     name: string;
     rotation_period: string;
     orbital_period: string;

@@ -4,5 +4,5 @@
 <h4>A (probably) comprehensive guide on Star Wars!</h4>
 
 <app-categories (categorySelect)="loadCategory($event)"></app-categories>
-<app-category-items [category] = "category" [items] = "items"></app-category-items>
-<app-item-details></app-item-details>
+<app-category-items (itemSelect)="loadItem($event)" [category] = "category" [items] = "items"></app-category-items>
+<app-item-details [item] = "item" ></app-item-details>
