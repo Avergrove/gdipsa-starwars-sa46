@@ -2,12 +2,12 @@
   <div class="component">
     <h3>Categories</h3>
     <ul class="list-group">
-      <li class="list-group-item"><Button class="btn btn-default" (click)="displayItems('Characters')">Characters</Button></li>
-      <li class="list-group-item"><Button class="btn btn-default" (click)="displayItems('Films')">Films</Button></li>
-      <li class="list-group-item"><Button class="btn btn-default" (click)="displayItems('Species')">Species</Button></li>
-      <li class="list-group-item"><Button class="btn btn-default" (click)="displayItems('Starships')">Starship</Button></li>
-      <li class="list-group-item"><Button class="btn btn-default" (click)="displayItems('Vehicles')">Vehicles</Button></li>
-      <li class="list-group-item"><Button class="btn btn-default" (click)="displayItems('Planets')">Planets</Button></li>
+      <li id="list-characters" class="list-group-item" (click)="displayItems('Characters')"><Button class="btn btn-default">Characters</Button></li>
+      <li id="list-films" class="list-group-item" (click)="displayItems('Films')"><Button class="btn btn-default">Films</Button></li>
+      <li id="list-species" class="list-group-item" (click)="displayItems('Species')"><Button class="btn btn-default">Species</Button></li>
+      <li id="list-starships" class="list-group-item" (click)="displayItems('Starships')"><Button class="btn btn-default">Starship</Button></li>
+      <li id="list-vehicles" class="list-group-item" (click)="displayItems('Vehicles')"><Button class="btn btn-default">Vehicles</Button></li>
+      <li id="list-planets" class="list-group-item" (click)="displayItems('Planets')"><Button class="btn btn-default">Planets</Button></li>
     </ul>
   </div>
 </div>

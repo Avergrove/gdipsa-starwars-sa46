@@ -1,4 +1,4 @@
-<div #itemDetails [ngClass]="{container: true, animated: true, float: !activeState, hidden: !activeState, fadeOutLeft: !activeState, fadeInRight: activeState}">
+<div #itemDetails [ngClass]="{container: true, animated: true, hidden: !activeState, float: !activeState, fadeOutLeft: !activeState, fadeInRight: activeState}">
   <div>
     <div *ngIf="item.category == 'people'">
       <h2>{{item.name}}</h2>
@@ -8,9 +8,11 @@
       <div><span class="item-key">Hair Color:</span> {{item.hair_color}}</div>
       <div><span class="item-key">Birth year:</span> {{item.birth_year}}</div>
       <div><span class="item-key">Gender:</span> {{item.gender}}</div>
+      <div><span class="item-key">Home World:</span> {{item.homeworld}}</div>
 
-      <div><span class="item-key">URL:</span> {{item.url}}</div>
-      <div><span class="item-key">URL:</span> {{imageUrl}}</div>
+      <div><span class="item-key">Notes</span></div>
+      <div><input type="text" value="..."></div>
+      <button class="btn btn-success"> <i class="fas fa-share-alt"></i>  [Share Placeholder]</button>
     </div>
 
     <div *ngIf="item.category == 'film'">

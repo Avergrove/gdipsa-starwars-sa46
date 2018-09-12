@@ -1,0 +1,116 @@
+.list-group-item{
+    margin-top: 1.5vh;
+    border-color: #4c554c;
+    border-style: solid;
+    border-width:0.5px;
+    border-radius: 1%;
+    cursor: pointer;
+}
+
+#list-characters{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+#list-characters:before {
+    content: "";
+    position: absolute;
+    width: 500%;
+    height: 500%;
+    top: -200%;
+    left: -50%;
+    z-index: -1;
+    background: url('https://www.sideshowtoy.com/wp-content/uploads/2017/07/star-wars-luke-skywalker-sixth-scale-hot-toys-feature-903109.jpg');
+}
+
+#list-films{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+#list-films:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 500%;
+    top: -200%;
+    left: 60%;
+    z-index: -1;
+    background: url('https://images-na.ssl-images-amazon.com/images/I/81P3lDJbjCL._SY679_.jpg');
+}
+
+#list-species{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+#list-species:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 500%;
+    top: -350%;
+    left: 39%;
+    z-index: -1;
+    background: url('https://media.npr.org/assets/img/2017/05/25/ap_937410086173-5518539c8b0056d0425c7f7c6937c61489539e2c-s800-c85.jpg');
+}
+
+#list-starships{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+#list-starships:before {
+    content: "";
+    position: absolute;
+    width: 500%;
+    height: 500%;
+    top: -300%;
+    left: 39%;
+    z-index: -1;
+    background: url('https://ksassets.timeincuk.net/wp/uploads/sites/54/2017/11/Millenium-Falcon-920x518.jpg');
+}
+
+#list-vehicles{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+#list-vehicles:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -30%;
+    left: 80%;
+    z-index: -1;
+    background: url('https://vignette.wikia.nocookie.net/starwars/images/1/16/AT-AT_2_Fathead.png/revision/latest?cb=20161108042721');
+}
+
+#list-planets{
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    color: #fff;
+}
+
+#list-planets:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 80%;
+    z-index: -1;
+    background: url('https://vignette.wikia.nocookie.net/starwars/images/4/4a/Alderaan.jpg/revision/latest?cb=20061211013805');
+}
