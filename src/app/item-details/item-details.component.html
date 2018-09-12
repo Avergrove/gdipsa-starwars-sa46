@@ -1,87 +1,94 @@
 <div #itemDetails [ngClass]="{container: true, animated: true, hidden: !activeState, float: !activeState, fadeOutLeft: !activeState, fadeInRight: activeState}">
-  <div>
-    <div *ngIf="item.category == 'people'">
-      <h2>{{item.name}}</h2>
-      <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div><span class="item-key">Height:</span> {{item.height}}</div>
-      <div><span class="item-key">Mass:</span> {{item.mass}}</div>
-      <div><span class="item-key">Hair Color:</span> {{item.hair_color}}</div>
-      <div><span class="item-key">Birth year:</span> {{item.birth_year}}</div>
-      <div><span class="item-key">Gender:</span> {{item.gender}}</div>
-      <div><span class="item-key">Home World:</span> {{item.homeworld}}</div>
+  <div *ngIf="item.category == 'people'">
+    <h2>{{item.name}}</h2>
+    <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
+    <div><span class="item-key">Height:</span> {{item.height}}</div>
+    <div><span class="item-key">Mass:</span> {{item.mass}}</div>
+    <div><span class="item-key">Hair Color:</span> {{item.hair_color}}</div>
+    <div><span class="item-key">Birth year:</span> {{item.birth_year}}</div>
+    <div><span class="item-key">Gender:</span> {{item.gender}}</div>
+    <div><span class="item-key">Home World:</span> {{item.homeworld}}</div>
 
-      <div><span class="item-key">Notes</span></div>
-      <div><input type="text" value="..."></div>
-      <button class="btn btn-success"> <i class="fas fa-share-alt"></i>  [Share Placeholder]</button>
-    </div>
-
-    <div *ngIf="item.category == 'film'">
-      <h2>{{item.title}}</h2>
-      <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div><span class="item-key">Episode ID:</span> {{item.episode_id}}</div>
-      <div><span class="item-key">Opening Crawl:</span> {{item.opening_crawl}}</div>
-      <div><span class="item-key">Director:</span> {{item.director}}</div>
-      <div><span class="item-key">Producer:</span> {{item.producer}}</div>
-      <div><span class="item-key">Release date:</span> {{item.release_date}}</div>
-
-
-    </div>
-
-
-    <div *ngIf="item.category == 'species'">
-      <h2>{{item.name}}</h2>
-      <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div><span class="item-key">Classification:</span> {{item.classification}}</div>
-      <div><span class="item-key">Designation:</span> {{item.designation}}</div>
-      <div><span class="item-key">Average Height:</span> {{item.average_height}}</div>
-      <div><span class="item-key">Skin Colors:</span> {{item.skin_colors}}</div>
-      <div><span class="item-key">Hair Colors:</span> {{item.hair_colors}}</div>
-      <div><span class="item-key">Eye Colors:</span> {{item.eye_colors}}</div>
-      <div><span class="item-key">Average Lifespan:</span> {{item.average_lifespan}}</div>
-      <div><span class="item-key">Homeworld:</span> {{item.homeworld}}</div>
-      <div><span class="item-key">Language:</span> {{item.language}}</div>
-    </div>
-
-
-    <div *ngIf="item.category == 'starship'">
-      <h2>{{item.name}}</h2>
-      <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div><span class="item-key">Name:</span> {{item.name}}</div>
-      <div><span class="item-key">Model:</span> {{item.model}}</div>
-      <div><span class="item-key">Manufacturer:</span> {{item.manufacturer}}</div>
-      <div><span class="item-key">Cost in Credit:</span> {{item.cost_in_credit}}</div>
-      <div><span class="item-key">Length:</span> {{item.length}}</div>
-      <div><span class="item-key">Max Atmosphering Speed:</span> {{item.max_atmosphering_speed}}</div>
-      <div><span class="item-key">Crew:</span> {{item.crew}}</div>
-      <div><span class="item-key">Passengers:</span> {{item.passengers}}</div>
-      <div><span class="item-key">Cargo Capacity:</span> {{item.cargo_capacity}}</div>
-      <div><span class="item-key">Consumables:</span> {{item.consumables}}</div>
-      <div><span class="item-key">Hyperdrive Rating:</span> {{item.hyperdrive_rating}}</div>
-      <div><span class="item-key">MGLT:</span> {{item.mglt}}</div>
-      <div><span class="item-key">Starship Class:</span> {{item.starship_class}}</div>
-    </div>
-
-
-    <div *ngIf="item.category == 'vehicle'">
-      <h2>{{item.name}}</h2>
-      <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div><span class="item-key">Model:</span> {{item.model}}</div>
-      <div><span class="item-key">Manufacturer:</span> {{item.manufacturer}}</div>
-      <div><span class="item-key">Cost in Credit:</span> {{item.cost_in_credit}}</div>
-      <div><span class="item-key">Length:</span> {{item.length}}</div>
-      <div><span class="item-key">Max Atmosphering Speed:</span> {{item.max_atmosphering_speed}}</div>
-      <div><span class="item-key">Crew:</span> {{item.crew}}</div>
-      <div><span class="item-key">Passengers:</span> {{item.passengers}}</div>
-      <div><span class="item-key">Cargo Capacity:</span> {{item.cargo_capacity}}</div>
-      <div><span class="item-key">Consumables:</span> {{item.consumables}}</div>
-      <div><span class="item-key">Vehicle Class:</span> {{item.vehicle_class}}</div>
-    </div>
-
-
-    <div *ngIf="item.category == 'planet'">
-      <h2>{{item.name}}</h2>
-      <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
-      <div>Birth year: {{item.birth_year}}</div>
-    </div>
+    <div><span class="item-key">Notes</span></div>
   </div>
+
+  <div *ngIf="item.category == 'film'">
+    <h2>{{item.title}}</h2>
+    <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
+    <div><span class="item-key">Episode ID:</span> {{item.episode_id}}</div>
+    <div><span class="item-key">Opening Crawl:</span> {{item.opening_crawl}}</div>
+    <div><span class="item-key">Director:</span> {{item.director}}</div>
+    <div><span class="item-key">Producer:</span> {{item.producer}}</div>
+    <div><span class="item-key">Release date:</span> {{item.release_date}}</div>
+
+
+  </div>
+
+
+  <div *ngIf="item.category == 'species'">
+    <h2>{{item.name}}</h2>
+    <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
+    <div><span class="item-key">Classification:</span> {{item.classification}}</div>
+    <div><span class="item-key">Designation:</span> {{item.designation}}</div>
+    <div><span class="item-key">Average Height:</span> {{item.average_height}}</div>
+    <div><span class="item-key">Skin Colors:</span> {{item.skin_colors}}</div>
+    <div><span class="item-key">Hair Colors:</span> {{item.hair_colors}}</div>
+    <div><span class="item-key">Eye Colors:</span> {{item.eye_colors}}</div>
+    <div><span class="item-key">Average Lifespan:</span> {{item.average_lifespan}}</div>
+    <div><span class="item-key">Homeworld:</span> {{item.homeworld}}</div>
+    <div><span class="item-key">Language:</span> {{item.language}}</div>
+  </div>
+
+
+  <div *ngIf="item.category == 'starship'">
+    <h2>{{item.name}}</h2>
+    <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
+    <div><span class="item-key">Name:</span> {{item.name}}</div>
+    <div><span class="item-key">Model:</span> {{item.model}}</div>
+    <div><span class="item-key">Manufacturer:</span> {{item.manufacturer}}</div>
+    <div><span class="item-key">Cost in Credit:</span> {{item.cost_in_credit}}</div>
+    <div><span class="item-key">Length:</span> {{item.length}}</div>
+    <div><span class="item-key">Max Atmosphering Speed:</span> {{item.max_atmosphering_speed}}</div>
+    <div><span class="item-key">Crew:</span> {{item.crew}}</div>
+    <div><span class="item-key">Passengers:</span> {{item.passengers}}</div>
+    <div><span class="item-key">Cargo Capacity:</span> {{item.cargo_capacity}}</div>
+    <div><span class="item-key">Consumables:</span> {{item.consumables}}</div>
+    <div><span class="item-key">Hyperdrive Rating:</span> {{item.hyperdrive_rating}}</div>
+    <div><span class="item-key">MGLT:</span> {{item.mglt}}</div>
+    <div><span class="item-key">Starship Class:</span> {{item.starship_class}}</div>
+  </div>
+
+
+  <div *ngIf="item.category == 'vehicle'">
+    <h2>{{item.name}}</h2>
+    <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
+    <div><span class="item-key">Model:</span> {{item.model}}</div>
+    <div><span class="item-key">Manufacturer:</span> {{item.manufacturer}}</div>
+    <div><span class="item-key">Cost in Credit:</span> {{item.cost_in_credit}}</div>
+    <div><span class="item-key">Length:</span> {{item.length}}</div>
+    <div><span class="item-key">Max Atmosphering Speed:</span> {{item.max_atmosphering_speed}}</div>
+    <div><span class="item-key">Crew:</span> {{item.crew}}</div>
+    <div><span class="item-key">Passengers:</span> {{item.passengers}}</div>
+    <div><span class="item-key">Cargo Capacity:</span> {{item.cargo_capacity}}</div>
+    <div><span class="item-key">Consumables:</span> {{item.consumables}}</div>
+    <div><span class="item-key">Vehicle Class:</span> {{item.vehicle_class}}</div>
+  </div>
+
+
+  <div *ngIf="item.category == 'planet'">
+    <h2>{{item.name}}</h2>
+    <div><img src="{{imageUrl}}" style="max-height: 30vh; max-width: 30vw"></div>
+    <div><span class="item-key">Rotation Period:</span> {{item.rotation_period}}</div>
+    <div><span class="item-key">Orbital Period:</span> {{item.orbital_period}}</div>
+    <div><span class="item-key">Diameter:</span> {{item.diameter}}</div>
+    <div><span class="item-key">Climate:</span> {{item.climate}}</div>
+    <div><span class="item-key">Gravity:</span> {{item.gravity}}</div>
+    <div><span class="item-key">Terrain:</span> {{item.terrain}}</div>
+    <div><span class="item-key">Surface Water:</span> {{item.surface_water}}</div>
+    <div><span class="item-key">Population:</span> {{item.population}}</div>
+  </div>
+
+  <div><input type="text" value="..."></div>
+  <a class="twitter-share-button btn btn-primary" href="https://twitter.com/intent/tweet?text={{tweetText}}" data-size="large"><span class="fa fa-twitter"></span>  Tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
