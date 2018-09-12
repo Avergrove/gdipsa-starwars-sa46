@@ -1,0 +1,27 @@
+.container{
+    background-color: #03050f1e;
+
+    margin-top: 2.5vh;
+    
+    border-width: 2.5px;
+    border-color: #2d2c33;
+    border-style: solid;
+
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+}
+
+.list-group-item{
+    margin-top: 1.5vh;
+    border-color: #585f38;
+    border-style: solid;
+    border-width:0.5px;
+    border-radius: 1%;
+    cursor: pointer;
+    background-color: #161b2e;
+}
+
+.category-item-btn{
+    background-color: #364472;
+    color: white;
+}
